@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+void permute(string str, int first, int last) 
+{
+	if (first == last)
+		cout << str << "\n";
+	else
+		for (int i = first; i <= last; i++)
+		{
+			swap(str[first], str[i]);
+			permute(str, first + 1, last);
+		}
+}
+
+int main()
+{
+	string x = "abc";
+	permute(x, 0, x.size() - 1);
+}
