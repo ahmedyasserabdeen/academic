@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+class Node
+{
+public:
+    int data;
+    class Node* next;
+    Node( int  d, Node* a) {
+        data = d;
+        next = a;
+    }
+};
