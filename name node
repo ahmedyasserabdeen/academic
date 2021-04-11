@@ -1,0 +1,79 @@
+#include<iostream>
+using namespace std;
+class Node
+{
+public:
+    int data;
+    class Node* next;
+    Node( int  d, Node* a) {
+        data = d;
+        next = a;
+    }
+};
+int main() {
+    Node* a1 = new Node(0, NULL);
+    Node* a2 = new Node(0, NULL);
+    Node* a3 = new Node(0, NULL);
+    Node* a4 = new Node(0, NULL);
+    Node* a5 = new Node(0, NULL);
+
+
+    Node* h1 = new Node(0, NULL);
+    Node* h2 = new Node(0, NULL);
+    Node* h3 = new Node(0, NULL);
+    Node* h4 = new Node(0, NULL);
+    Node* h5 = new Node(0, NULL);
+
+
+    Node* m1 = new Node(0, NULL);
+    Node* m2 = new Node(0, NULL);
+    Node* m3 = new Node(0, NULL);
+    Node* m4 = new Node(0, NULL);
+    Node* m5 = new Node(0, NULL);
+
+    Node* e1 = new Node(0, NULL);
+    Node* e2 = new Node(0, NULL);
+    Node* e3 = new Node(0, NULL);
+    Node* e4 = new Node(0, NULL);
+    Node* e5 = new Node(0, NULL);
+    Node* e6 = new Node(0, NULL);
+
+
+    Node* d1 = new Node(0, NULL);
+    Node* d2 = new Node(0, NULL);
+    Node* d3 = new Node(0, NULL);
+    Node* d4 = new Node(0, NULL);
+
+
+    a1->next = a2;
+    a2->next = a3;
+    a3->next = a4;
+    a4->next = a5;
+
+    h1->next = h2;
+    h2->next = h3;
+    h4->next = h2;
+    h5->next = h4;
+
+    m1->next = m2;
+    m2->next = m3;
+    m3->next = m4;
+    m4->next = m5;
+
+    e1->next = e2;
+    e2->next = e3;
+    e3->next = e4;
+    e4->next = e5;
+    e6->next = e3;
+
+    d1->next = d2;
+    d2->next = d3;
+    d3->next = d4;
+    d4->next = d2;
+
+
+
+
+
+}
+
