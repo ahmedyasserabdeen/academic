@@ -1,0 +1,29 @@
+def mergesort(mainList):
+    if len(mainList)>1:
+        m=len(mainList)//2
+        l=mainList[:m]
+        r=mainList[m:]
+        mergesort(l)
+        mergesort(r)
+        p1=0
+        p2=0
+        p3=0
+        while p1<len(l) and p2<len(r):
+            if l[p1]>r[p2]:
+                mainList[p3]=r[p2]
+                p2=p2+1
+            else:
+                mainList[p3]=l[p1]
+                p1=p1+1
+            p3=p3+1
+        while p1<len(l):
+            mainList[p3]=l[p1]
+            p1=p1+1
+            p3=p3+1
+        while p2<len(r):
+            mainList[p3]=r[p2]
+            p2=p2+1
+            p3=p3+1
+mainList=[150,87,210,22,45,360,509,77]
+mergesort(mainList)
+print(mainList)
