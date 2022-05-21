@@ -1,0 +1,17 @@
+def quickSort(arr):
+    if len(arr)<2:
+        return arr
+    pos=0
+    for i in range(1,len(arr)):
+        if arr[i]<=arr[0]:
+            pos=pos+1
+            arr[i],arr[pos]=arr[pos],arr[i]
+    arr[0],arr[pos]=arr[pos],arr[0]
+    l=quickSort(arr[0:pos])
+    r=quickSort(arr[pos+1:len(arr)])
+    arr=l+[arr[pos]]+r
+    return arr
+
+list=[150,87,210,22,45,360,509,77]
+print("unsorted", list)
+print("sorted", quickSort(list))
